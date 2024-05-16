@@ -17,6 +17,8 @@ wss.on('connection', (ws) => {
     });
 });
 
+app.use(express.static('public'));
+
 server.listen(process.env.PORT || 3000, () => {
     console.log(`Server started on port ${server.address().port}`);
 });
